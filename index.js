@@ -27,7 +27,10 @@ const serverApp = server.createServer((req, res) =>{
             res.write("Welcome to home page");
             res.end();
         }
-        
+        else
+        {
+            req.statusCode = 302
+        }
     }
     // const queryItem = urlObj.query;
     // res.write(queryItem.id);
